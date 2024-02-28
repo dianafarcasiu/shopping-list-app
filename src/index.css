@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --bg-color: #fefbf6;
+  --main-color: #e36414;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 2rem 0;
+  min-height: 100vh;
+  width: 100vw;
+  font-family: "Poppins";
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 26rem;
+  min-width: 100%;
+  text-align: center;
+  padding: 1.4rem;
+  border-radius: 20px;
+  border: 1px solid var(--main-color);
+  background-color: var(--bg-color);
+}
+h1 {
+  margin: 0.3rem 0 1.8rem;
+}
+
+/* Form style */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.3rem;
+}
+form input {
+  font-family: inherit;
+  background-color: transparent;
+  border: 0;
+  width: 65%;
+  border-radius: 10px;
+  padding: 0.3rem;
+  margin: 0;
+}
+form input:focus {
+  outline: 0;
+}
+
+.select {
+  width: 2.4rem;
+  padding: 0 0.2rem;
+  background-color: transparent;
+  font-family: inherit;
+  border: 0;
+  border-radius: 10px;
+}
+.select:focus {
+  outline: 0;
+}
+
+.btn {
+  background-color: var(--main-color);
+  color: #fff;
+  font-family: inherit;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.96);
+}
+.btn:hover {
+  background-color: transparent;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+.btn:focus {
+  outline: 0;
+}
+
+/* Grocery list style */
+.item-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+  border-radius: 10px;
+}
+.item:hover {
+  transform: scale(1.02);
+}
+
+.checkbox {
+  margin-right: 0.5rem;
+  accent-color: var(--main-color);
+}
+.checked {
+  text-decoration: line-through;
+  color: var(--main-color);
+}
+
+.item li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Clear button */
+.clear {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.clear .btn {
+  padding: 0.3rem 0.5rem;
+}
+
+/* Stats */
+.stats {
+  font-size: 0.8rem;
+  margin: 2.2rem 0 0.2rem;
+  border-top: 0.5px solid var(--main-color);
+}
+.stats p {
+  margin: 0;
+  padding: 0.5rem 0;
+  color: #3b3b3b;
 }
